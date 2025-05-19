@@ -6,21 +6,26 @@
         xmlns:local="clr-namespace:DentalClinicApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid Margin="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="ApplicationsGrid" AutoGenerateColumns="False" IsReadOnly="True">
+        <Label x:Name="UserInfoLabel" Content="Пользователь: " Grid.Row="0" Margin="0,0,0,10"/>
+        <DataGrid x:Name="ApplicationsGrid" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Заголовок" Binding="{Binding Article}" Width="*"/>
                 <DataGridTextColumn Header="Краткое описание" Binding="{Binding ShortDescription}" Width="*"/>
                 <DataGridTextColumn Header="Тип" Binding="{Binding Type}" Width="*"/>
                 <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="*"/>
                 <DataGridTextColumn Header="Исполнитель" Binding="{Binding Executor.FullName}" Width="*"/>
+                <DataGridTextColumn Header="Дата создания" Binding="{Binding CreationDate}" Width="*"/>
+                <DataGridTextColumn Header="Номер заявки" Binding="{Binding RegistrationNumber}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
             <Button Content="Добавить заявку" Margin="0,0,10,0" Click="AddApplication_Click"/>
             <Button Content="Редактировать заявку" Margin="0,0,10,0" Click="EditApplication_Click"/>
             <Button Content="Удалить заявку" Margin="0,0,10,0" Click="DeleteApplication_Click"/>

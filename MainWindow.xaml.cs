@@ -13,6 +13,7 @@ namespace DentalClinicApp
         {
             InitializeComponent();
             currentUser = user;
+            UserInfoLabel.Content = $"Пользователь: {user.FullName}, Зарегистрирован: {user.RegistrationDate}";
             LoadApplications();
         }
 

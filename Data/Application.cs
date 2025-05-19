@@ -19,6 +19,8 @@ namespace DentalClinicApp.Data
         public DateTime RegistrationDate { get; set; } // Дата регистрации
         public ApplicationStatus Status { get; set; }  // Статус
         public int? ExecutorId { get; set; }           // ID исполнителя
-        public User Executor { get; set; }             // Исполнитель (ссылка на пользователя)
+        public User Executor { get; set; }             // Исполнитель
+        public DateOnly CreationDate { get; set; }     // Дата создания заявки
+        public string RegistrationNumber { get; set; } // Номер заявки
     }
 }
