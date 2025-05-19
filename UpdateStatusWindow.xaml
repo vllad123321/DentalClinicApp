@@ -1,0 +1,22 @@
+﻿<Window x:Class="DentalClinicApp.UpdateStatusWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DentalClinicApp"
+        mc:Ignorable="d"
+        Title="UpdateStatusWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="Выберите статус:"/>
+        <ComboBox x:Name="StatusComboBox" Grid.Row="0" Margin="100,0,0,10">
+            <ComboBoxItem>На рассмотрении</ComboBoxItem>
+            <ComboBoxItem>В процессе</ComboBoxItem>
+            <ComboBoxItem>Завершено</ComboBoxItem>
+        </ComboBox>
+        <Button Content="Сохранить" Grid.Row="1" Margin="0,10" Click="SaveButton_Click"/>
+    </Grid>
+</Window>
